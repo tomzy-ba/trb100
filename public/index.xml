@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>trb100</title>
+    <link>https://trb100.com/</link>
+    <description>Recent content on trb100</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 29 Jan 2024 22:29:58 +0000</lastBuildDate>
+    <atom:link href="https://trb100.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lmao</title>
+      <link>https://trb100.com/posts/lmao/</link>
+      <pubDate>Mon, 29 Jan 2024 22:29:58 +0000</pubDate>
+      <guid>https://trb100.com/posts/lmao/</guid>
+      <description>HELLO how do you guys do today? </description>
+    </item>
+  </channel>
+</rss>
