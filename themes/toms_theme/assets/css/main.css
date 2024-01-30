@@ -18,6 +18,15 @@ footer {
 }
 
 a {
-  color: #00e;
+  color: #226;
   text-decoration: none;
+}
+
+#tom-header {
+  margin: 0;
+}
+
+#header-links {
+  display: flex;
+  justify-content: space-around;
 }
