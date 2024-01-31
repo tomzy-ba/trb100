@@ -9,6 +9,7 @@ body {
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
+
 }
 
 footer {
@@ -22,17 +23,25 @@ a {
 }
 /* toms theme */
 
-#header-links {
-  display: flex;
-  justify-content:space-around;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  background-color: #99999922;
-  overflow: hidden;
 }
+
+header {
+  padding: 0 1rem;
+}
+
+#header-links {
+  display: flex;
+  justify-content:space-around;
+  font-size: large;
+}
+
 main {
 word-wrap: break-word;
+}
+
+footer {
+  padding: 0 1rem;
 }
