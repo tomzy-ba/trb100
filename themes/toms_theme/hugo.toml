@@ -17,11 +17,6 @@ name = 'Tags'
 pageRef = '/tags'
 weight = 30
 
-[[menus.main]]
-name= 'Study'
-pageRef = '/study'
-weight = 40
-
 [module]
   [module.hugoVersion]
     extended = false

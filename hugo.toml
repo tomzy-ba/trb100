@@ -48,7 +48,7 @@ theme = 'toms_theme'
         block = false
         title = true
     [markup.goldmark.renderer]
-      hardWraps = false
+      hardWraps = true 
       unsafe = false
       xhtml = false
 

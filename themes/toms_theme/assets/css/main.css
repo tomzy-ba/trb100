@@ -4,7 +4,6 @@ body {
   line-height: 1.5;
   margin: 2rem;
   max-width: 768px;
-  background-color: lightblue;
 }
 
 header {
@@ -21,12 +20,19 @@ a {
   color: #226;
   text-decoration: none;
 }
-
-#tom-header {
-  margin: 0;
-}
+/* toms theme */
 
 #header-links {
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #99999922;
+  overflow: hidden;
+}
+main {
+word-wrap: break-word;
 }
