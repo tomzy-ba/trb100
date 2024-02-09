@@ -2,14 +2,13 @@ body {
   color: #222;
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 2rem;
-  max-width: 768px;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
-
 }
 
 footer {
@@ -27,28 +26,40 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url("/026\ Saint\ Petersburg.png");
+  min-height: 100vh;
 }
 
-header {
-  padding: 0 1rem;
+a:hover {
+  color:lightblue;
+}
+
+header, footer {
+  background-color: whitesmoke;
+}
+header h1 {
+  font-size:3rem;
+  border-bottom: 1px solid black;
+  margin: 2rem 3rem;
 }
 
 #header-links {
   display: flex;
-  justify-content:space-around;
-  font-size: large;
+  font-size: 2em;
+  justify-content: space-around;
+  list-style-type: none;
 }
-
 main {
   word-wrap: break-word;
+  margin: 1rem;
+  flex:1;
 }
 
-footer {
-  padding: 0 1rem;
-}
 pre, code {
   white-space: pre;
   overflow-x: auto;
   word-break: normal;
+}
+
+footer {
+  padding: 1rem;
 }

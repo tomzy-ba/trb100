@@ -6,5 +6,10 @@ tags = 'notes'
 +++
 
 - Complete a computer science access course
-- Do a foundation year for maths at a university
 - Then go on to do my computer science undergraduate
+
+which universities look good?
+- Bristol seems really cool
+- Warwick (requires a foundation year)
+- Sheffield
+- 
