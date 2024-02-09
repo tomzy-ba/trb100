@@ -24,8 +24,6 @@ a {
 /* toms theme */
 
 body {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
 }
 
@@ -36,7 +34,7 @@ a:hover {
 
 header, footer {
   background-color: whitesmoke;
-  padding: .5% 4%;
+  padding: .5% 4rem;
 }
 header h1 {
   font-size:3rem;
@@ -53,8 +51,8 @@ h1 {
 }
 main {
   word-wrap: break-word;
-  flex-grow:1;
-  padding: 10px 10%;
+  width: 60rem;
+  margin-left:4rem;
 }
 
 pre, code {
