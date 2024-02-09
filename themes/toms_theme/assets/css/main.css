@@ -46,7 +46,7 @@ main {
 footer {
   padding: 0 1rem;
 }
-code {
+pre, code {
   white-space: pre;
   overflow-x: auto;
   word-break: normal;
