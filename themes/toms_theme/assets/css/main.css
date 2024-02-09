@@ -27,7 +27,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url(/static/nordwood-themes-R53t-Tg6J4c-unsplash.jpg);
+  background-image: url("/static/nordwood-themes-R53t-Tg6J4c-unsplash.jpg");
 }
 
 header {
