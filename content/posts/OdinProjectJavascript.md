@@ -120,7 +120,8 @@ alert(user.surname); // Cooper
 Descriptors for accessor properties are different from those for data properties.
 For accessor properties there is no value or writable.
 
-- accessor descriptors have get, set, enumerable and configurable 
+- accessor descriptors are get, set, enumerable and configurable 
+- get and set are special functions specifically for triggered when a object property is read/set
 
 ```Javascript
 let user = {
