@@ -66,6 +66,8 @@ Classes in javascript don't function in the same way as other OOP languages, in 
 ### getters and setters
 getters and setters are used for simpler syntax, better data quality, and it's useful for behind-the-scenes
 
+get and set are special functions triggered when a object property is read/set
+
 There are two types of object properties, data properties and accessor properties
 
 
@@ -121,8 +123,6 @@ Descriptors for accessor properties are different from those for data properties
 For accessor properties there is no value or writable.
 
 - accessor descriptors are get, set, enumerable and configurable 
-- get and set are special functions specifically for triggered when a object property is read/set
-
 ```Javascript
 let user = {
   name: "John",
