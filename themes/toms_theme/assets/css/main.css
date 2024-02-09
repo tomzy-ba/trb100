@@ -21,6 +21,7 @@ a {
   color: #226;
   text-decoration: none;
 }
+
 /* toms theme */
 
 body {
@@ -39,9 +40,12 @@ header {
 }
 
 main {
-word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 footer {
   padding: 0 1rem;
+}
+code {
+  color:red;
 }
