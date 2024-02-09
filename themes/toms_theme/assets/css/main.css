@@ -26,8 +26,9 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
+
 
 a:hover {
   color:lightblue;
@@ -35,31 +36,29 @@ a:hover {
 
 header, footer {
   background-color: whitesmoke;
+  padding: .5% 4%;
 }
 header h1 {
   font-size:3rem;
+}
+h1 {
   border-bottom: 1px solid black;
-  margin: 2rem 3rem;
 }
 
 #header-links {
   display: flex;
-  font-size: 2em;
-  justify-content: space-around;
+  font-size: larger;
   list-style-type: none;
+  gap:4rem;
 }
 main {
   word-wrap: break-word;
-  margin: 1rem;
-  flex:1;
+  flex-grow:1;
+  padding: 10px 10%;
 }
 
 pre, code {
   white-space: pre;
   overflow-x: auto;
   word-break: normal;
-}
-
-footer {
-  padding: 1rem;
 }
