@@ -47,5 +47,7 @@ footer {
   padding: 0 1rem;
 }
 code {
-  color:red;
+  white-space: pre;
+  overflow-x: auto;
+  word-break: normal;
 }
