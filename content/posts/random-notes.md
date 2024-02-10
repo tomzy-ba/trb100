@@ -6,3 +6,7 @@ draft = true
 
 ## Basic Javascript
 - .replace can be used to remove parts of a string
+
+
+
+-  

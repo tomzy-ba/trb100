@@ -143,3 +143,36 @@ alert(user.fullName); // John Smith
 
 for(let key in user) alert(key); // name, surname
 ```
+
+## Modern Javascript
+In 2010, several competing Js package manager emerged to help automating the process of downloading libraries from a central repo. Npm and yarn are the two most popular today.
+- By using npm init you can create a package.json file, this is a conf file that npm uses to save all project info like dependencies
+
+In 2009, a project named commonJS was started with the goal of specifying an ecosystem for js outside the browser. A big part of CommonJS was its specification for modules, which would finally allow js to omport and export code across files like other langs, without resorting to global variables. 
+
+Node uses commonJS modules, you would write:
+var moment = require("moment);
+to load the moment module using node
+
+Now this works for node, however if you tried to use it in browser, you'd get an error saying require is not defined because the browser does not have access to your filesystem. This means that loading modules has to be done dynamically.
+This is where a module bundler helps, which finds all the require statements and replaces them with the actual cotent of the required file, and bundles them together into one file.
+- The most popular bundlers are browserify and webpack
+
+Transpiling code means converting the code in one lang to another similar lang, like from Typescript to Javascript 
+
+A Task Runner is a tool that automates different parts of the build process, such as minifying code, running tests.
+- Npm and Grunt are the most popular
+
+- As project complexity grows, so do the benefits of well structured code.
+- So it is good to break down code into smaller files/modules
+
+#### webpack
+If you give webpack a file as an entry point, it will build a dependancy graph based on all the imports/exports (which is just a tree of all the files/modules being imported)
+
+If you are dealing with just bundling js then this is easy, but if your project includes css or assets then you will need to import your css file directly into your javascript. When webpack bundles your files it will try copy them into dist.
+
+Since these files are not Javascript, webpack will not know how to process them unless you tell it how to by including the correct loaders and rules. 
+
+Since we would like to keep all our dev work within src and leave dist for the build, we can use a plugin called html-webpack-plugin which will automatically build a html file in dist for us when we build project. It will also then auto add certain things to the html like our output bundle in a script tag.
+
+By default, it will use a blank template, so the resulting html file will essentially be the usual boilerplate with our script. If you make a dist/index.html then it would be overwritten, we can also tell it to use a template and put a path to our own html file that is in src.
