@@ -176,3 +176,77 @@ Since these files are not Javascript, webpack will not know how to process them 
 Since we would like to keep all our dev work within src and leave dist for the build, we can use a plugin called html-webpack-plugin which will automatically build a html file in dist for us when we build project. It will also then auto add certain things to the html like our output bundle in a script tag.
 
 By default, it will use a blank template, so the resulting html file will essentially be the usual boilerplate with our script. If you make a dist/index.html then it would be overwritten, we can also tell it to use a template and put a path to our own html file that is in src.js
+
+
+
+### JSON
+Javascript Object Notation is a standardized way of structuring data. It has very similar syntax to Javascript Objects, however it can be used without JS
+
+JSON is essentially the universal format for transmitting data on the web. It is used for sending data between web servers, browser-based apps and using API's
+
+JSON exists as a string, it needs to be converted to a native js object when you want to access the data. 
+
+This is what a JSON file looks like
+```Javascript
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    }
+  ]
+}
+
+
+```
+JSON requires you to put object properties in double quotes
+
+if we parsed a JSON into a variable called superheroes for example, we could then access the data using:
+
+```Javascript
+superHeroes.homeTown;
+superHeroes["active"];
+// to access data down the hierarchy, you'd do this
+superHeroes["members"][1]["powers"][2];
+```
+
+#### Converting JSON's
+Sometimes you will recieve a raw JSON string, and sometimes we need to send a JSON string, so you need to know how to convert it.
+
+- Parse() turns a JSON string into an object
+- Stringify() turns an object intoo a JSON string
+
+
+
+### Object Orientated Programming
+Remember that OOP are a set of guidelines to follow, not unbreakable rules.
+
+As you craft your objects, one of the most important things to remember is the **Single Responsibility Principle**, which states that a class should only have one responsibility.
+
+This principle means that it's a really good idea to seperate your DOM stuff from the application logic.
+This is because it makes code easier to read, organize, and debug.
+
+Tightly-coupled objects are objects that rely on each other so heavily that removing/changing any will break the rest.
+So you should try and make each object as independent as possible.
+
+
+#### SOLID
+SOLID is a set of principles that help you to remember OOP structure
+
+
+
+
+
+
+
+
+
+
+
