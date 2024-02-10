@@ -175,4 +175,4 @@ Since these files are not Javascript, webpack will not know how to process them 
 
 Since we would like to keep all our dev work within src and leave dist for the build, we can use a plugin called html-webpack-plugin which will automatically build a html file in dist for us when we build project. It will also then auto add certain things to the html like our output bundle in a script tag.
 
-By default, it will use a blank template, so the resulting html file will essentially be the usual boilerplate with our script. If you make a dist/index.html then it would be overwritten, we can also tell it to use a template and put a path to our own html file that is in src.
+By default, it will use a blank template, so the resulting html file will essentially be the usual boilerplate with our script. If you make a dist/index.html then it would be overwritten, we can also tell it to use a template and put a path to our own html file that is in src.js
