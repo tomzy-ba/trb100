@@ -243,10 +243,17 @@ SOLID is a set of principles that help you to remember OOP structure
 
 
 
+### Dynamic User Interface Functions
 
+Drop-down menus:
+  - You should hard code the menu items into your html but hide them using js by using a class.
+  - Make sure the javascript code is reusable you should be able to create multiple drop downs with the same code.
+  - If you bundle your code into a module you can publish it to npm and then install and use it anytime you like.
 
+Image slider:
+  Create an image carousel
 
-
-
-
-
+  - Set up a very wide div which contain the slides of each image. 
+  - Build functions for the next and previous buttons and make the transitions smooth
+  - set up arrow buttons which activate those functions and make the next function trigger every 5 secs
+  - add in navigation dots at the bottom that represent the slides.
