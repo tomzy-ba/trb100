@@ -257,3 +257,46 @@ Image slider:
   - Build functions for the next and previous buttons and make the transitions smooth
   - set up arrow buttons which activate those functions and make the next function trigger every 5 secs
   - add in navigation dots at the bottom that represent the slides.
+
+
+
+### ES6
+ES6 is a version of Javascript that was released in 2015. Javascript isn't updated regularly because it needs to be stable for browsers to run on.
+
+
+
+### Asynchronous Code
+Asynchronous refers to a style of execution where tasks are performed independent of the main program flow. Basically pushing a task to the background.
+This is how 
+
+**A callback function is a function that is passed into another function as an argument, which is then invoked inside the outer function to complete a routine**
+
+Example:
+```Javascript 
+myDiv.addEventListener("click", function(){
+  // do something!
+})
+```
+
+#### Promises
+There are multiple ways you can handle asynchronous code in Javascript, such as promises. A promise is an object that might produce a value at some point in the future. 
+Promise is an object that represents the eventual completion of an asynchronous operation.
+Let's say getData() is a function that fetches some data from a server and returns it as an object that we use:
+
+```Javascript 
+const getData = function() {
+  // go fetch data from some API...
+  // clean it up a bit and return it as an object:
+  return data
+}
+```
+The issue with this code is that it assumes the data is available instantly
+
+```Javascript
+const myData = getData() // if this is refactored to return a Promise...
+
+myData.then(function(data){ // .then() tells it to wait until the promise is resolved
+  const pieceOfData = data['whatever'] // and THEN run the function inside
+})
+```
+The **then** method allows you to react to the promise 
