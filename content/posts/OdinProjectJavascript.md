@@ -4,7 +4,7 @@ date = 2024-01-31T18:28:57Z
 draft = false
 tags = 'study'
 +++
-## Factory Functions
+### Factory Functions
 One of the main problems with object constructors is that they look like regular JS functions, however operate very differently
 These functions are very similar to object constructors work, but instead of using the "new" keyword to create an object, they set up and return the object within the function
 
@@ -144,7 +144,7 @@ alert(user.fullName); // John Smith
 for(let key in user) alert(key); // name, surname
 ```
 
-## Modern Javascript
+### Modern Javascript
 In 2010, several competing Js package manager emerged to help automating the process of downloading libraries from a central repo. Npm and yarn are the two most popular today.
 - By using npm init you can create a package.json file, this is a conf file that npm uses to save all project info like dependencies
 
@@ -300,3 +300,7 @@ myData.then(function(data){ // .then() tells it to wait until the promise is res
 })
 ```
 The **then** method allows you to react to the promise 
+
+
+#### AJAX
+AJAX is a specific technique that can exchange data with a server without reloading the page. This ensures that users do not have to wait for page reload time 
