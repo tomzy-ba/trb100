@@ -304,3 +304,26 @@ The **then** method allows you to react to the promise
 
 #### AJAX
 AJAX is a specific technique that can exchange data with a server without reloading the page. This ensures that users do not have to wait for page reload time 
+
+
+
+### Data structures
+The idea of a data structure is to store data in a way that meets the needs of your application. 
+Depending on the application, there are a batch of basic data structures you can use.
+Such as:
+- Arrays
+- Linked Lists
+- Records
+- Hash Tables
+- Graphs
+- Stacks/Queues
+- Trees
+
+
+#### Linked List
+A linked list is a data structure, like an array however the nodes are not stored next to each other in memory. 
+Each node has two parts, the data (information you want to store) and the pointer (the reference that points to the next node in the list)
+
+- Linked lists can grow and shrink as needed in your application
+- You can't directly jump to a specific element's position like in an array.
+- They are good for things like playlists, queues, image viewers
