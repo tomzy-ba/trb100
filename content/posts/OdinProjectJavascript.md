@@ -327,3 +327,115 @@ Each node has two parts, the data (information you want to store) and the pointe
 - Linked lists can grow and shrink as needed in your application
 - You can't directly jump to a specific element's position like in an array.
 - They are good for things like playlists, queues, image viewers
+
+
+### Hash Map
+One of the most common data structures across programming is a Hash Map.
+A Hash Map takes in a key value pair, produces a hash code, and stores the pair in a bucket. 
+
+A Hash Map is like a giant locker room for storing and finding things quickly. Imagine each locker can hold an item, and each locker has a unique number. Instead of remembering where you can put each item, you use a special function to figure out where to store it.
+
+Hash Maps are faster to search than arrays, because you don't have to go through all the the data points.
+
+Hashing refers to taking in input in and generating a corresponding output. Hashing the same input should always return the same code, and there should be no random generation component. 
+
+```Javascript
+function hash(name) {
+  return name.charAt(0);
+}
+```
+
+At it's core a HashMap is implemented using an array of fixed size, where each element in the array is called a **bucket**, each bucket can store multiple key value pairs
+
+#### Buckets
+Buckets are arrays used to store elements, for a specific key, we decide which bucket to use for storage through our hash function.
+
+The hash function returns a number that serves as the index of the array which we store this specific key value pair. If i wanted to store a name with key: "Fred", value: "Smith"
+
+- Pass **Fred** into the hash function to get the hash code 385
+- Find the bucket index at index 385
+- Store the key value pair in that bucket.
+
+
+#### Collisions
+Collisions occur when two or more keys map to the same bucket. To handle collisions, most HashMaps use **chaining**.
+Chaining involves storing multiple key-value pairs in the same bucket using an array. 
+It works by first finding the hash code, then finding the bucket, then searches the array to find the key-value pair.
+
+
+#### HashMap Use-cases
+Counting the times a certain element occurs in an array/string:
+```Javascript
+// Example of counting occurrences using a HashMap
+function countOccurrences(arr) {
+  const counts = new Map();
+
+  for (const element of arr) {
+    counts.set(element, counts.get(element) + 1 || 1);
+  }
+
+  return counts;
+}
+
+const arr = [1, 2, 3, 2, 1, 3, 1, 4, 2];
+const occurrences = countOccurrences(arr);
+console.log(occurrences);
+```
+
+Removing duplicate elements from an array/string:
+```Javascript
+// Example of removing duplicates using a HashMap
+
+function removeDuplicates(arr) {
+
+const uniqueElements = new Map();
+
+for (const element of arr) {
+
+uniqueElements.set(element, true);
+
+}
+
+return Array.from(uniqueElements.keys());
+
+}
+
+const arr = [1, 2, 3, 2, 1, 3, 1, 4, 2];
+
+const uniqueArr = removeDuplicates(arr);
+
+console.log(uniqueArr);
+```
+
+Efficient Lookup:
+```Javascript
+// Example of efficient lookup using a HashMap
+
+const studentGrades = new Map([
+
+['John', 90],
+
+['Alice', 95],
+
+['Bob', 87]
+
+]);
+
+console.log(studentGrades.get('Alice')); // Output: 95
+
+console.log(studentGrades.get('Bob')); // Output: 87
+```
+
+
+
+
+### Binary Search Trees
+A Binary Search Tree is a data structure with parent nodes and child nodes, a node with no children is called a leaf node.
+
+It searches through data by starting at the top node, and comparing the value to the child nodes to send it all the way down the tree until it finds the data it needs which is a very fast way of getting data.
+
+
+
+
+
+

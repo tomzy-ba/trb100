@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c8319807782e41c6",
+            "id": "54c1b1aba0013e08",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "18027ba6d3a398a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Israel Palestine.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a38b86a5294eb549",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OdinProjectJavascript.md",
+                "file": "Israel Palestine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OdinProjectJavascript.md",
+                "file": "Israel Palestine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OdinProjectJavascript.md"
+                "file": "Israel Palestine.md"
               }
             }
           }
@@ -147,6 +159,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8319807782e41c6",
-  "lastOpenFiles": []
+  "active": "18027ba6d3a398a8",
+  "lastOpenFiles": [
+    "Back-End.md",
+    "Israel Palestine.md",
+    "website name.md",
+    "random-notes.md",
+    "OdinProjectJavascript.md",
+    "Screeps.md",
+    "schedule.md",
+    "Other Research.md"
+  ]
 }
