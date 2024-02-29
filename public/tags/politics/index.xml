@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Politics on trb100</title>
+    <link>http://localhost:1313/tags/politics/</link>
+    <description>Recent content in Politics on trb100</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Tue, 07 Nov 2023 22:02:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Israel Palestine</title>
+      <link>http://localhost:1313/posts/israel-palestine/</link>
+      <pubDate>Tue, 07 Nov 2023 22:02:04 +0000</pubDate>
+      <guid>http://localhost:1313/posts/israel-palestine/</guid>
+      <description>Overview Jews lived in the Israel area in the 1st Century but it was taken over by the Roman Empire&#xA;In 1916 the Jewish population in Palestine was 3%&#xA;Britain made the [[#Balfour Declaration-1917]] which led to Jews immigrating to Palestine&#xA;The League of nations mandate was a part of the Treaty of Versailles that gave the territory that Germany and the Ottoman Empire conquered to other nations after they lost the war.</description>
+    </item>
+  </channel>
+</rss>

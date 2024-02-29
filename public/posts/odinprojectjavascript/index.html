@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-uk"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odin Project Javascript | trb100</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+
+
+</head>
+
+<body>
+    <header id="tom-header">
+      <h1>trb100</h1>
+
+  <nav>
+    <ul id="header-links">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+    </header>
+    <main>
+      
+  <h1>Odin Project Javascript</h1>
+
+  
+  
+  <time datetime="2024-01-31T18:28:57&#43;00:00">January 31, 2024</time>
+
+  <h3 id="factory-functions">Factory Functions</h3>
+<p>One of the main problems with object constructors is that they look like regular JS functions, however operate very differently<br>
+These functions are very similar to object constructors work, but instead of using the &ldquo;new&rdquo; keyword to create an object, they set up and return the object within the function</p>
+<p>They do not use the prototype, so they aren&rsquo;t as efficient</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">discordName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// hey, this is a constructor - 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// then this can be refactored into a factory!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createUser</span> (<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">discordName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">discordName</span> };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// and that&#39;s very similar, except since it&#39;s just a function,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// we don&#39;t need a new keyword
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// here is a shorthand way to make an object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">thatObject</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">color</span>}
+</span></span></code></pre></div><h3 id="the-module-pattern">The Module Pattern</h3>
+<p>Sometimes, you don&rsquo;t need a factory to make multiple objects - Instead, you can wrap sections of code together, hiding the variables and functions that you do not need. This can be done by wrapping your factory function in parentheses and immediately invoking it. This immediate function is called an Immediately Invoked Function Expression (IIFE) in short. This pattern of wrapping a factory function inside an IIFE is called the <strong>Module Pattern</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calculator</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sub</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mul</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">div</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">add</span>, <span style="color:#a6e22e">sub</span>, <span style="color:#a6e22e">mul</span>, <span style="color:#a6e22e">div</span> };
+</span></span><span style="display:flex;"><span>})();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">calculator</span>.<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// 8
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">calculator</span>.<span style="color:#a6e22e">sub</span>(<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">calculator</span>.<span style="color:#a6e22e">mul</span>(<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">5534</span>); <span style="color:#75715e">// 77476
+</span></span></span></code></pre></div><p>In this example, we have a factory function creating some basic operations that we need only once. We can wrap it in parentheses and activate it using () returning the object stored in calculator<br>
+Think of these as mini-functions</p>
+<p>The Module Pattern is used for <strong>encapsulation</strong>, the idea of building code/data singular units, with selective access. This is used for <strong>Namespacing</strong> (a technique that is used to avoid naming collisions)<br>
+The example code demonstrates this perfectly, the &ldquo;add&rdquo; variable is a common name so it&rsquo;s best to nest it inside of the Module Pattern</p>
+<h3 id="classes">classes</h3>
+<p>Classes in javascript don&rsquo;t function in the same way as other OOP languages, in javascript they function pretty much the same as object constructors.</p>
+<h3 id="getters-and-setters">getters and setters</h3>
+<p>getters and setters are used for simpler syntax, better data quality, and it&rsquo;s useful for behind-the-scenes</p>
+<p>get and set are special functions triggered when a object property is read/set</p>
+<p>There are two types of object properties, data properties and accessor properties</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#a6e22e">get</span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">propName</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// getter, the code executed on getting obj.propName
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">propName</span>(<span style="color:#a6e22e">value</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setter, the code executed on setting obj.propName = value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The getter works when obj.propName is read, the setter when it is assigned.</p>
+<p>For instance, if we have a user.object with <strong>name</strong> and <strong>surname</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">surname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Smith&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">fullName</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">surname</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// get here is used to give the object a function that it can display the outcome from
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">fullName</span>); <span style="color:#75715e">// John Smith
+</span></span></span></code></pre></div><ul>
+<li>Now if you try and assign a value to user.fullname it will give an error</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">fullName</span>(<span style="color:#a6e22e">value</span>) {
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">surname</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// the set is only activated when the user.fullName is **set**, so alert(user.fullName) would not work 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// set fullName is executed with the given value.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alice Cooper&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Alice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">surname</span>); <span style="color:#75715e">// Cooper
+</span></span></span></code></pre></div><h3 id="accessor-descriptors">Accessor descriptors</h3>
+<p>Descriptors for accessor properties are different from those for data properties.<br>
+For accessor properties there is no value or writable.</p>
+<ul>
+<li>accessor descriptors are get, set, enumerable and configurable</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">surname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Smith&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#39;fullName&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">get</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">surname</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">value</span>) {
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">surname</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">fullName</span>); <span style="color:#75715e">// John Smith
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// name, surname
+</span></span></span></code></pre></div><h3 id="modern-javascript">Modern Javascript</h3>
+<p>In 2010, several competing Js package manager emerged to help automating the process of downloading libraries from a central repo. Npm and yarn are the two most popular today.</p>
+<ul>
+<li>By using npm init you can create a package.json file, this is a conf file that npm uses to save all project info like dependencies</li>
+</ul>
+<p>In 2009, a project named commonJS was started with the goal of specifying an ecosystem for js outside the browser. A big part of CommonJS was its specification for modules, which would finally allow js to omport and export code across files like other langs, without resorting to global variables.</p>
+<p>Node uses commonJS modules, you would write:<br>
+var moment = require(&ldquo;moment);<br>
+to load the moment module using node</p>
+<p>Now this works for node, however if you tried to use it in browser, you&rsquo;d get an error saying require is not defined because the browser does not have access to your filesystem. This means that loading modules has to be done dynamically.<br>
+This is where a module bundler helps, which finds all the require statements and replaces them with the actual cotent of the required file, and bundles them together into one file.</p>
+<ul>
+<li>The most popular bundlers are browserify and webpack</li>
+</ul>
+<p>Transpiling code means converting the code in one lang to another similar lang, like from Typescript to Javascript</p>
+<p>A Task Runner is a tool that automates different parts of the build process, such as minifying code, running tests.</p>
+<ul>
+<li>
+<p>Npm and Grunt are the most popular</p>
+</li>
+<li>
+<p>As project complexity grows, so do the benefits of well structured code.</p>
+</li>
+<li>
+<p>So it is good to break down code into smaller files/modules</p>
+</li>
+</ul>
+<h4 id="webpack">webpack</h4>
+<p>If you give webpack a file as an entry point, it will build a dependancy graph based on all the imports/exports (which is just a tree of all the files/modules being imported)</p>
+<p>If you are dealing with just bundling js then this is easy, but if your project includes css or assets then you will need to import your css file directly into your javascript. When webpack bundles your files it will try copy them into dist.</p>
+<p>Since these files are not Javascript, webpack will not know how to process them unless you tell it how to by including the correct loaders and rules.</p>
+<p>Since we would like to keep all our dev work within src and leave dist for the build, we can use a plugin called html-webpack-plugin which will automatically build a html file in dist for us when we build project. It will also then auto add certain things to the html like our output bundle in a script tag.</p>
+<p>By default, it will use a blank template, so the resulting html file will essentially be the usual boilerplate with our script. If you make a dist/index.html then it would be overwritten, we can also tell it to use a template and put a path to our own html file that is in src.js</p>
+<h3 id="json">JSON</h3>
+<p>Javascript Object Notation is a standardized way of structuring data. It has very similar syntax to Javascript Objects, however it can be used without JS</p>
+<p>JSON is essentially the universal format for transmitting data on the web. It is used for sending data between web servers, browser-based apps and using API&rsquo;s</p>
+<p>JSON exists as a string, it needs to be converted to a native js object when you want to access the data.</p>
+<p>This is what a JSON file looks like</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;squadName&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Super hero squad&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;homeTown&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Metro City&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;formed&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2016</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;secretBase&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Super tower&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;active&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;members&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Molecule Man&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">29</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;secretIdentity&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Dan Jukes&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;powers&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Radiation resistance&#34;</span>, <span style="color:#e6db74">&#34;Turning tiny&#34;</span>, <span style="color:#e6db74">&#34;Radiation blast&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>JSON requires you to put object properties in double quotes</p>
+<p>if we parsed a JSON into a variable called superheroes for example, we could then access the data using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#a6e22e">superHeroes</span>.<span style="color:#a6e22e">homeTown</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">superHeroes</span>[<span style="color:#e6db74">&#34;active&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// to access data down the hierarchy, you&#39;d do this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">superHeroes</span>[<span style="color:#e6db74">&#34;members&#34;</span>][<span style="color:#ae81ff">1</span>][<span style="color:#e6db74">&#34;powers&#34;</span>][<span style="color:#ae81ff">2</span>];
+</span></span></code></pre></div><h4 id="converting-jsons">Converting JSON&rsquo;s</h4>
+<p>Sometimes you will recieve a raw JSON string, and sometimes we need to send a JSON string, so you need to know how to convert it.</p>
+<ul>
+<li>Parse() turns a JSON string into an object</li>
+<li>Stringify() turns an object intoo a JSON string</li>
+</ul>
+<h3 id="object-orientated-programming">Object Orientated Programming</h3>
+<p>Remember that OOP are a set of guidelines to follow, not unbreakable rules.</p>
+<p>As you craft your objects, one of the most important things to remember is the <strong>Single Responsibility Principle</strong>, which states that a class should only have one responsibility.</p>
+<p>This principle means that it&rsquo;s a really good idea to seperate your DOM stuff from the application logic.<br>
+This is because it makes code easier to read, organize, and debug.</p>
+<p>Tightly-coupled objects are objects that rely on each other so heavily that removing/changing any will break the rest.<br>
+So you should try and make each object as independent as possible.</p>
+<h4 id="solid">SOLID</h4>
+<p>SOLID is a set of principles that help you to remember OOP structure</p>
+<h3 id="dynamic-user-interface-functions">Dynamic User Interface Functions</h3>
+<p>Drop-down menus:</p>
+<ul>
+<li>You should hard code the menu items into your html but hide them using js by using a class.</li>
+<li>Make sure the javascript code is reusable you should be able to create multiple drop downs with the same code.</li>
+<li>If you bundle your code into a module you can publish it to npm and then install and use it anytime you like.</li>
+</ul>
+<p>Image slider:<br>
+Create an image carousel</p>
+<ul>
+<li>Set up a very wide div which contain the slides of each image.</li>
+<li>Build functions for the next and previous buttons and make the transitions smooth</li>
+<li>set up arrow buttons which activate those functions and make the next function trigger every 5 secs</li>
+<li>add in navigation dots at the bottom that represent the slides.</li>
+</ul>
+<h3 id="es6">ES6</h3>
+<p>ES6 is a version of Javascript that was released in 2015. Javascript isn&rsquo;t updated regularly because it needs to be stable for browsers to run on.</p>
+<h3 id="asynchronous-code">Asynchronous Code</h3>
+<p>Asynchronous refers to a style of execution where tasks are performed independent of the main program flow. Basically pushing a task to the background.<br>
+This is how</p>
+<p><strong>A callback function is a function that is passed into another function as an argument, which is then invoked inside the outer function to complete a routine</strong></p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#a6e22e">myDiv</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// do something!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>})
+</span></span></code></pre></div><h4 id="promises">Promises</h4>
+<p>There are multiple ways you can handle asynchronous code in Javascript, such as promises. A promise is an object that might produce a value at some point in the future.<br>
+Promise is an object that represents the eventual completion of an asynchronous operation.<br>
+Let&rsquo;s say getData() is a function that fetches some data from a server and returns it as an object that we use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// go fetch data from some API...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// clean it up a bit and return it as an object:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">data</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The issue with this code is that it assumes the data is available instantly</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>() <span style="color:#75715e">// if this is refactored to return a Promise...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">myData</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){ <span style="color:#75715e">// .then() tells it to wait until the promise is resolved
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pieceOfData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;whatever&#39;</span>] <span style="color:#75715e">// and THEN run the function inside
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>})
+</span></span></code></pre></div><p>The <strong>then</strong> method allows you to react to the promise</p>
+<h4 id="ajax">AJAX</h4>
+<p>AJAX is a specific technique that can exchange data with a server without reloading the page. This ensures that users do not have to wait for page reload time</p>
+<h3 id="data-structures">Data structures</h3>
+<p>The idea of a data structure is to store data in a way that meets the needs of your application.<br>
+Depending on the application, there are a batch of basic data structures you can use.<br>
+Such as:</p>
+<ul>
+<li>Arrays</li>
+<li>Linked Lists</li>
+<li>Records</li>
+<li>Hash Tables</li>
+<li>Graphs</li>
+<li>Stacks/Queues</li>
+<li>Trees</li>
+</ul>
+<h4 id="linked-list">Linked List</h4>
+<p>A linked list is a data structure, like an array however the nodes are not stored next to each other in memory.<br>
+Each node has two parts, the data (information you want to store) and the pointer (the reference that points to the next node in the list)</p>
+<ul>
+<li>Linked lists can grow and shrink as needed in your application</li>
+<li>You can&rsquo;t directly jump to a specific element&rsquo;s position like in an array.</li>
+<li>They are good for things like playlists, queues, image viewers</li>
+</ul>
+<h3 id="hash-map">Hash Map</h3>
+<p>One of the most common data structures across programming is a Hash Map.<br>
+A Hash Map takes in a key value pair, produces a hash code, and stores the pair in a bucket.</p>
+<p>A Hash Map is like a giant locker room for storing and finding things quickly. Imagine each locker can hold an item, and each locker has a unique number. Instead of remembering where you can put each item, you use a special function to figure out where to store it.</p>
+<p>Hash Maps are faster to search than arrays, because you don&rsquo;t have to go through all the the data points.</p>
+<p>Hashing refers to taking in input in and generating a corresponding output. Hashing the same input should always return the same code, and there should be no random generation component.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hash</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>At it&rsquo;s core a HashMap is implemented using an array of fixed size, where each element in the array is called a <strong>bucket</strong>, each bucket can store multiple key value pairs</p>
+<h4 id="buckets">Buckets</h4>
+<p>Buckets are arrays used to store elements, for a specific key, we decide which bucket to use for storage through our hash function.</p>
+<p>The hash function returns a number that serves as the index of the array which we store this specific key value pair. If i wanted to store a name with key: &ldquo;Fred&rdquo;, value: &ldquo;Smith&rdquo;</p>
+<ul>
+<li>Pass <strong>Fred</strong> into the hash function to get the hash code 385</li>
+<li>Find the bucket index at index 385</li>
+<li>Store the key value pair in that bucket.</li>
+</ul>
+<h4 id="collisions">Collisions</h4>
+<p>Collisions occur when two or more keys map to the same bucket. To handle collisions, most HashMaps use <strong>chaining</strong>.<br>
+Chaining involves storing multiple key-value pairs in the same bucket using an array.<br>
+It works by first finding the hash code, then finding the bucket, then searches the array to find the key-value pair.</p>
+<h4 id="hashmap-use-cases">HashMap Use-cases</h4>
+<p>Counting the times a certain element occurs in an array/string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example of counting occurrences using a HashMap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">countOccurrences</span>(<span style="color:#a6e22e">arr</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">counts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">counts</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">element</span>, <span style="color:#a6e22e">counts</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">element</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">counts</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">occurrences</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">countOccurrences</span>(<span style="color:#a6e22e">arr</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">occurrences</span>);
+</span></span></code></pre></div><p>Removing duplicate elements from an array/string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example of removing duplicates using a HashMap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">removeDuplicates</span>(<span style="color:#a6e22e">arr</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">uniqueElements</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">uniqueElements</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">element</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">uniqueElements</span>.<span style="color:#a6e22e">keys</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">uniqueArr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">removeDuplicates</span>(<span style="color:#a6e22e">arr</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">uniqueArr</span>);
+</span></span></code></pre></div><p>Efficient Lookup:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example of efficient lookup using a HashMap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">studentGrades</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>([
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;John&#39;</span>, <span style="color:#ae81ff">90</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#ae81ff">95</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#ae81ff">87</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">studentGrades</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;Alice&#39;</span>)); <span style="color:#75715e">// Output: 95
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">studentGrades</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;Bob&#39;</span>)); <span style="color:#75715e">// Output: 87
+</span></span></span></code></pre></div><h3 id="binary-search-trees">Binary Search Trees</h3>
+<p>A Binary Search Tree is a data structure with parent nodes and child nodes, a node with no children is called a leaf node.</p>
+<p>It searches through data by starting at the top node, and comparing the value to the child nodes to send it all the way down the tree until it finds the data it needs which is a very fast way of getting data.</p>
+
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/study/">Study</a></li>
+    </ul>
+  </div>
+
+
+    </main>
+    <footer>
+      <p>trb100</p>
+    </footer>
+</body>
+
+</html>
