@@ -1,3 +1,10 @@
++++
+title = 'Isreal Palestine'
+date = 2023-11-07T22:02:04Z
+draft = false
+tags = 'politics'
++++
+
 ### Overview
 - Jews lived in the Israel area in the 1st Century but it was taken over by the Roman Empire
 - In 1916 the Jewish population in Palestine was 3%

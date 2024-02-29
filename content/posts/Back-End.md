@@ -1,3 +1,10 @@
++++
+title = 'Back End'
+date = 2024-02-28T22:02:04Z
+draft = false
+tags = 'notes'
++++
+
 ### Intro
 The front-end is where browser-side code is ran, stuff like markup, styling and scripting.
 The back-end is **server-side** code, which is for storing data and serving the front end files to the browser.
