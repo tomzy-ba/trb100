@@ -1,5 +1,5 @@
 +++
-title = 'Isreal Palestine'
+title = 'Israel Palestine'
 date = 2023-11-07T22:02:04Z
 draft = false
 tags = 'politics'
