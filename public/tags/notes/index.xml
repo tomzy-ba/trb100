@@ -13,14 +13,14 @@
       <link>http://localhost:1313/posts/back-end/</link>
       <pubDate>Wed, 28 Feb 2024 22:02:04 +0000</pubDate>
       <guid>http://localhost:1313/posts/back-end/</guid>
-      <description>Intro The front-end is where browser-side code is ran, stuff like markup, styling and scripting.&#xA;The back-end is server-side code, which is for storing data and serving the front end files to the browser.&#xA;Express Middleware Middleware is just a javascript function that Express will call for you between the time it recieves a network request and the time it sends a response.&#xA;You can use these functions to: print details of the req to the console or check if the user has permissions to get the data they are requesting.</description>
+      <description>Intro The front-end is where browser-side code is ran, stuff like markup, styling and scripting.&#xA;The back-end is server-side code, which is for storing data and serving the front end files to the browser.</description>
     </item>
     <item>
       <title>Life Plans</title>
       <link>http://localhost:1313/posts/life-plans/</link>
       <pubDate>Wed, 07 Feb 2024 22:02:04 +0000</pubDate>
       <guid>http://localhost:1313/posts/life-plans/</guid>
-      <description> Complete a computer science access course Then go on to do my computer science undergraduate which universities look good?&#xA;Bristol seems really cool Warwick (requires a foundation year) Sheffield </description>
+      <description>Complete a computer science access course Then go on to do my computer science undergraduate which universities look good?</description>
     </item>
   </channel>
 </rss>

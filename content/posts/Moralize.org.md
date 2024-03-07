@@ -1,4 +1,8 @@
-
++++
+title = 'Moralize.org'
+draft = true
+tags = 'notes'
++++
 
 
 ### Web app

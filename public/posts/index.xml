@@ -13,35 +13,28 @@
       <link>http://localhost:1313/posts/back-end/</link>
       <pubDate>Wed, 28 Feb 2024 22:02:04 +0000</pubDate>
       <guid>http://localhost:1313/posts/back-end/</guid>
-      <description>Intro The front-end is where browser-side code is ran, stuff like markup, styling and scripting.&#xA;The back-end is server-side code, which is for storing data and serving the front end files to the browser.&#xA;Express Middleware Middleware is just a javascript function that Express will call for you between the time it recieves a network request and the time it sends a response.&#xA;You can use these functions to: print details of the req to the console or check if the user has permissions to get the data they are requesting.</description>
+      <description>Intro The front-end is where browser-side code is ran, stuff like markup, styling and scripting.&#xA;The back-end is server-side code, which is for storing data and serving the front end files to the browser.</description>
     </item>
     <item>
       <title>Life Plans</title>
       <link>http://localhost:1313/posts/life-plans/</link>
       <pubDate>Wed, 07 Feb 2024 22:02:04 +0000</pubDate>
       <guid>http://localhost:1313/posts/life-plans/</guid>
-      <description> Complete a computer science access course Then go on to do my computer science undergraduate which universities look good?&#xA;Bristol seems really cool Warwick (requires a foundation year) Sheffield </description>
+      <description>Complete a computer science access course Then go on to do my computer science undergraduate which universities look good?</description>
     </item>
     <item>
       <title>Odin Project Javascript</title>
       <link>http://localhost:1313/posts/odinprojectjavascript/</link>
       <pubDate>Wed, 31 Jan 2024 18:28:57 +0000</pubDate>
       <guid>http://localhost:1313/posts/odinprojectjavascript/</guid>
-      <description>Factory Functions One of the main problems with object constructors is that they look like regular JS functions, however operate very differently&#xA;These functions are very similar to object constructors work, but instead of using the &amp;ldquo;new&amp;rdquo; keyword to create an object, they set up and return the object within the function&#xA;They do not use the prototype, so they aren&amp;rsquo;t as efficient&#xA;const User = function (name) { this.name = name; this.</description>
+      <description>Factory Functions One of the main problems with object constructors is that they look like regular JS functions, however operate very differently</description>
     </item>
     <item>
       <title>Israel Palestine</title>
       <link>http://localhost:1313/posts/israel-palestine/</link>
       <pubDate>Tue, 07 Nov 2023 22:02:04 +0000</pubDate>
       <guid>http://localhost:1313/posts/israel-palestine/</guid>
-      <description>Overview Jews lived in the Israel area in the 1st Century but it was taken over by the Roman Empire&#xA;In 1916 the Jewish population in Palestine was 3%&#xA;Britain made the [[#Balfour Declaration-1917]] which led to Jews immigrating to Palestine&#xA;The League of nations mandate was a part of the Treaty of Versailles that gave the territory that Germany and the Ottoman Empire conquered to other nations after they lost the war.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/moralize.org/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/moralize.org/</guid>
-      <description>Web app For logins I will just use Oauth User Profile functionality, individual settings/preferences News Feed, what will load onto the home screen? Post creation and deletion </description>
+      <description>Overview Jews lived in the Israel area in the 1st Century but it was taken over by the Roman Empire</description>
     </item>
   </channel>
 </rss>

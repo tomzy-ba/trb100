@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/odinprojectjavascript/</link>
       <pubDate>Wed, 31 Jan 2024 18:28:57 +0000</pubDate>
       <guid>http://localhost:1313/posts/odinprojectjavascript/</guid>
-      <description>Factory Functions One of the main problems with object constructors is that they look like regular JS functions, however operate very differently&#xA;These functions are very similar to object constructors work, but instead of using the &amp;ldquo;new&amp;rdquo; keyword to create an object, they set up and return the object within the function&#xA;They do not use the prototype, so they aren&amp;rsquo;t as efficient&#xA;const User = function (name) { this.name = name; this.</description>
+      <description>Factory Functions One of the main problems with object constructors is that they look like regular JS functions, however operate very differently</description>
     </item>
   </channel>
 </rss>
