@@ -34,7 +34,7 @@ a:hover {
 
 header, footer {
   background-color: whitesmoke;
-  padding: .5% 4rem;
+  padding: .5% 2rem;
 }
 header h1 {
   font-size:3rem;
@@ -51,7 +51,6 @@ h1 {
 }
 main {
   word-wrap: break-word;
-  width: 50rem;
   padding: 10px 60px;
 }
 
