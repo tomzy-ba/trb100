@@ -36,5 +36,12 @@
       <guid>http://localhost:1313/posts/israel-palestine/</guid>
       <description>Overview Jews lived in the Israel area in the 1st Century but it was taken over by the Roman Empire&#xA;In 1916 the Jewish population in Palestine was 3%&#xA;Britain made the [[#Balfour Declaration-1917]] which led to Jews immigrating to Palestine&#xA;The League of nations mandate was a part of the Treaty of Versailles that gave the territory that Germany and the Ottoman Empire conquered to other nations after they lost the war.</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/moralize.org/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/moralize.org/</guid>
+      <description>Web app For logins I will just use Oauth User Profile functionality, individual settings/preferences News Feed, what will load onto the home screen? Post creation and deletion </description>
+    </item>
   </channel>
 </rss>

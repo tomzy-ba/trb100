@@ -3,5 +3,7 @@
   "spellcheck": false,
   "tabSize": 3,
   "livePreview": true,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "readableLineLength": true,
+  "strictLineBreaks": true
 }

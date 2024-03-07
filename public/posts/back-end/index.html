@@ -69,7 +69,65 @@ You can use these functions to: print details of the req to the console or check
 <p>Models are the basic building blocks of a database, they encapsulate different types of data.<br>
 Views are the user interface components, such as screens, buttons, forms.<br>
 Controllers are the components that decide what view to display and what information goes in.</p>
-
+<h3 id="routes">Routes</h3>
+<p>A web app needs:</p>
+<ul>
+<li>Routes, to forward requests to the appropriate controller function</li>
+<li>Controller functions, to get the requested data and create the HTML file</li>
+<li>Views(Templates), to render the data</li>
+</ul>
+<p>A route is a section of Express code that associates a HTTP verb like GET, a URL path, and a function. express.Router can be used to set this up.</p>
+<p>Route Parameters are <strong>named</strong> URL segments used to capture values at specific positions in the URL. The named segments are prefixed with a colon and then the name like: &ldquo;/:example_parameter/&rdquo;. The captured values are stored in the req.params object using the parameter names as keys.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/users/:userId/books/:bookId&#34;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Access userId via: req.params.userId
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Access bookId via: req.params.bookId
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="databases">Databases</h3>
+<p>Database API&rsquo;s are asynchronous, which means methods return immediate promises and other code can be executed in the meantime.</p>
+<h4 id="models">Models</h4>
+<p>A database model defines how your data is structured, organized, and used within a database.<br>
+When designing your models it is good practice to have seperate models for each &ldquo;object&rdquo;.</p>
+<h3 id="mongoose">Mongoose</h3>
+<p>Mongoose models are created using the <strong>Schema</strong> object, Schema is like an object constructor for a database, it defines all the data types you can enter and what you can input in them. For Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Schema</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">Schema</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SomeModelSchema</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Schema</span>({
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> String, <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> Number, <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">alive</span><span style="color:#f92672">:</span> Boolean, <span style="color:#75715e">// these are called fields
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">array</span><span style="color:#f92672">:</span> [],
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Compile model from schema
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SomeModel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">model</span>(<span style="color:#e6db74">&#34;SomeModel&#34;</span>, <span style="color:#a6e22e">SomeModelSchema</span>);
+</span></span></code></pre></div><p>Mongoose also has built-in validators, they allow you to set the acceptable range of values and the error message if not valid.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">breakfastSchema</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Schema</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">eggs</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> Number,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">min</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#34;Too few eggs&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">max</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> [<span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#34;Why no eggs?&#34;</span>],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">drink</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">enum</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Coffee&#34;</span>, <span style="color:#e6db74">&#34;Tea&#34;</span>, <span style="color:#e6db74">&#34;Water&#34;</span>],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h4 id="virtual-properties">Virtual Properties</h4>
+<p>Virtual properties are properties that you can get and set, but are not on MongoDB. The getters are used to format/ combine fields, and setters are used to seperate a single value into multiple.</p>
+<h4 id="creatingsearching-records">Creating/Searching records</h4>
+<p><em>Documents are called records in MongoDB</em><br>
+To create a record, you can save the current instance of a model by using the save() method. You can also use create() and pass in objects as params to make a record.</p>
+<p>To search for a record you can use query methods, specifying the as you would a JSON document. Like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Athlete</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">model</span>(<span style="color:#e6db74">&#34;Athlete&#34;</span>, <span style="color:#a6e22e">yourSchema</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// find all athletes who play tennis, returning the &#39;name&#39; and &#39;age&#39; fields
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tennisPlayers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">Athlete</span>.<span style="color:#a6e22e">find</span>(
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">sport</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Tennis&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;name age&#34;</span>,
+</span></span><span style="display:flex;"><span>).<span style="color:#a6e22e">exec</span>();
+</span></span></code></pre></div>
   
   <div>
     <div>Tags:</div>
