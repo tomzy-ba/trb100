@@ -51,7 +51,7 @@ h1 {
 }
 main {
   word-wrap: break-word;
-  padding: 10px 60px;
+  padding: 10px 1rem;
 }
 
 pre, code {
