@@ -263,6 +263,9 @@ In 1949, Israel signed armistices with:
 In 1950 the Knesset passed the Law of Return, which granted to all jews the right to settle and gain citizenship. This shows that Israel were trying to increase immigration.
 
 
+### Modern Conflict 
+
+
 ## Questions
 - Israel has used Knock Bombs to give an alert before they bomb hospitals ?
 - Hamas Recruit Child Soldiers ?
