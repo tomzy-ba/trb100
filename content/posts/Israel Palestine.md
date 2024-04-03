@@ -150,6 +150,9 @@ There were a lot of massacres, not very cool from both sides
 
 
 
+### Modern Conflict 
+
+
 ## Questions
 - Israel has used Knock Bombs to give an alert before they bomb hospitals ?
 - Hamas Recruit Child Soldiers ?
