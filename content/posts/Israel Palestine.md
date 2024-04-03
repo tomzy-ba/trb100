@@ -146,8 +146,121 @@ There were a lot of massacres, not very cool from both sides
 
 
 ### Declaration Of Independence
-[image](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Letter_from_Eliahu_Epstein_to_Harry_S._Truman%2C_May_14%2C_1948.jpg/695px-Letter_from_Eliahu_Epstein_to_Harry_S._Truman%2C_May_14%2C_1948.jpg)
 
+ Declaration of independence was made by **David Ben-Gurion**, at the time he was the executive head of the World Zionist Organization and a chairman of the Jewish agency for Palestine.
+This Declaration was done on the same day that the British ended their mandate over Palestine.
+
+**This Declaration did not specify the borders that this new state encapsulated**, however it did say:
+"The State of Israel is prepared to cooperate with the agencies and representatives of the United Nations in implementing the resolution of the General Assembly of the 29th, November, 1947"
+**This suggests that Israel was willing to follow the Partition Plan guidelines.**
+
+##### Impact
+
+- America and the Soviet Union instantly recognized Israel as a state and a few other UN countries followed.
+
+- This also brought another wave of inflation, with 700,000 jews immigrating from 1948-1951
+
+  
+
+  
+
+It was only a few days until four of the seven states of the Arab League (Egypt, Iraq, Transjordan, and Syria) and the Arab Liberation Army **invaded** the supposed new state and fought the Israelis. They invaded from the South, East, and North however the coordination was poor between them.
+
+  
+
+### Arab-Israeli war- 16 May 1948
+
+  
+
+**The UN declared a truce on the 29 May**, which began on 11 June and lasted 28 days, although both sides did find ways around this truce and during this time the conflict was bubbling and both sides were strengthening their armies.
+
+The UN also declared an arms embargo, which meant that no weapons were allowed to go into these countries.
+
+On 7 July, the day before the truce expired, Egypt attacked Negba.
+
+  
+
+#### 9-18 July 1948
+
+On the 9 July, Israeli forces launched an attack with many operations such as: Dani, Dekel, and Kedem.
+
+- Dani's goal was to capture territory east of Tel-Aviv
+
+- Dekel's goal was to capture Nazareth and the Lower Galilee
+
+- Kedem's goal was to capture East Jerusalem 
+
+In operation Dani **60,000** Palestinian residents were expelled.
+In operation Dekel Nazareth was captured on 16 July and lower Galilee was captured on 18 July.
+
+  
+
+###### Bernadotte Plan- 16 September 1948
+
+He offered a partition plan, but it was rejected by both sides
+
+#### 18 July 1948 - 10 March 1949
+
+On 18 July the second truce of the conflict went into play after massive persuasion from the UN.
+
+  
+
+During the truce Egyptians were blocking a lot of supply convoys. So on 15 October, Operation Yoav was launched by Israel, it's goal was to split the Egyptian forces and to conquer the Negev. The operation was a success, forcing Egyptian forces to retreat.
+
+  
+
+On the 22 October a third truce went into effect.
+
+However, the ALA didn't seem to respect this truce and attacked the IDF multiple times, and on 24 October, the IDF demanded the ALA to withdraw.
+
+When ALA leader, al-Qawuqji said no the IDF launched Operation Hiram and captured the entire Galilee.
+
+**This is an example of Israel being more shrewd**
+
+  
+
+On 22 December, the IDF launched Operation Horev with an objective to encircle the Egyptian forces in the **Gaza Strip** this operation was another clear victory for Israel but they withdrew due to international pressure.
+
+Soon after on 6 January 1949, Egypt announced that they were open to armistice negotiations with Israel
+
+  
+
+And on 7 January 1949 another truce was achieved.
+
+  
+
+#### Aftermath
+
+In 1949, Israel signed armistices with:
+
+- Egypt- 24 Feb
+
+- Lebanon- 23 March
+
+- Transjordan- 3 April
+
+- Syria- 20 July
+
+[Israel after armistice]([https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cia-is-map2.png/300px-Cia-is-map2.png](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cia-is-map2.png/300px-Cia-is-map2.png))
+
+**The West Bank became occupied by Transjordan and the Gaza strip became occupied by Egypt**
+
+  
+
+**The armistice lines left them with 22% more territory than the partition plan had planned to give them.**
+
+  
+
+  
+
+  
+
+- Israel lost 6,000 people in this war, 1% of their population- 4,000 soldiers and the rest civilians.
+
+- 700,000 Palestinian Arabs fled/were expelled.
+
+### Post Arab-Israeli war- 1949 19 July
+In 1950 the Knesset passed the Law of Return, which granted to all jews the right to settle and gain citizenship. This shows that Israel were trying to increase immigration.
 
 
 ## Questions

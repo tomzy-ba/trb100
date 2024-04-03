@@ -5,5 +5,8 @@
   "livePreview": true,
   "showLineNumber": true,
   "readableLineLength": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "newFileLocation": "root",
+  "newFileFolderPath": "images",
+  "attachmentFolderPath": "assets"
 }
