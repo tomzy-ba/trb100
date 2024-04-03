@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++.md",
+                "file": "Programming.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++.md",
+                "file": "Programming.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++.md",
+                "file": "Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++.md"
+                "file": "Programming.md"
               }
             }
           }
@@ -174,20 +174,21 @@
   },
   "active": "7cf43c22cb903952",
   "lastOpenFiles": [
+    "random-notes.md",
+    "Programming.md",
+    "OdinProjectJavascript.md",
+    "Moralize.org.md",
+    "life-plans.md",
     "Israel Palestine.md",
+    "Interview.md",
+    "C++.md",
+    "Svelte.md",
     "Back-End.md",
     "assets/Pasted image 20240307190012.png",
     "assets/Pasted image 20240307225308.png",
-    "Moralize.org.md",
-    "C++.md",
-    "Programming.md",
-    "Interview.md",
-    "Svelte.md",
     "schedule.md",
-    "random-notes.md",
     "Pasted image 20240307225035.png",
     "assets",
-    "OdinProjectJavascript.md",
     "Pasted image 20240307185931.png",
     "React.md",
     "HTMX.md",
