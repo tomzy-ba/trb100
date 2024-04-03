@@ -23,6 +23,10 @@ a {
 
 /* toms theme */
 
+*, h1, h2, h3, h4, h5, h6 {
+  font-family:"Open Sans";
+}
+
 body {
   height: 100vh;
 }
@@ -34,12 +38,12 @@ a:hover {
 
 header, footer {
   background-color: whitesmoke;
-  padding: .5% 2rem;
+  padding: .5% 1rem;
 }
 header h1 {
   font-size:3rem;
 }
-h1 {
+h1, h2, h3, h4, h5 {
   border-bottom: 1px solid black;
 }
 
@@ -51,7 +55,7 @@ h1 {
 }
 main {
   word-wrap: break-word;
-  padding: 10px 60px;
+  padding: 10px 1rem;
 }
 
 pre, code {
