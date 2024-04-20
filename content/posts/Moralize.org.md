@@ -11,3 +11,11 @@ tags = 'notes'
 - News Feed, what will load onto the home screen?
 - Post creation and deletion 
 - Bruh
+
+
+
+### Database
+#### Tables
+- Users
+- Posts
+- Labels
