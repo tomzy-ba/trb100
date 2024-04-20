@@ -1,8 +1,9 @@
 +++
-title = "Gym"
-draft = "false"
+title = 'Gym'
+date = 2024-04-20T11:44:20+01:00
+draft = true
 +++
 
 # Diet
-- Around 100-120 grams of protein is what I should be aiming for
-- ON Protein Powder is 24 grams of protein
+- Protein target should be around 100-120
+- ON Protein Powder is 24g
