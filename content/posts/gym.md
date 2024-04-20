@@ -1,7 +1,7 @@
 +++
 title = 'Gym'
 date = 2024-04-20T11:44:20+01:00
-draft = true
+draft = false
 +++
 
 # Diet
