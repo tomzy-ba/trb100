@@ -7,6 +7,7 @@ tags = 'notes'
 
 - Complete a computer science access course
 - Then go on to do my computer science undergraduate
+- cool
 
 which universities look good?
 - Bristol seems really cool
