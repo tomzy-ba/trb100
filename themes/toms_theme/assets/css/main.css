@@ -55,7 +55,8 @@ h1, h2, h3, h4, h5 {
 }
 main {
   word-wrap: break-word;
-  padding: 10px 1rem;
+  padding: 20px 1rem;
+  padding-right: 50px;
 }
 
 pre, code {
