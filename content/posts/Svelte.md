@@ -8,7 +8,7 @@ draft = "true"
 Svelte is a Javascript framework that functions slightly different to others. It compiles Svelte code into plain Javascript that mainpulates the DOM directly, other frameworks function as libraries that run in the browser.
 Svelte applications are built with **components**, self-contained blocks of code that encapsulate HTML, CSS and Javascript.
 - It is pretty fast
-- Fairy easy
+- Fairly easy
 - 
 
 

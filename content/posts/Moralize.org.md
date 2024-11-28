@@ -10,7 +10,6 @@ tags = 'notes'
 - User Profile functionality, individual settings/preferences 
 - News Feed, what will load onto the home screen?
 - Post creation and deletion 
-- Bruh
 
 
 
