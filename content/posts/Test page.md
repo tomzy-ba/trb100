@@ -1,6 +1,7 @@
 +++
 title = Test Page
 draft = false
+tags = 'test'
 +++
 
 {{< columns >}}

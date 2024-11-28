@@ -1,6 +1,7 @@
 +++
 title = Machine Learning
 draft = false
+tags = 'study'
 +++
 ## Decision tree
 A decision tree is where you structure a decision making process with many different nodes which ask questions, the answer given will decide which node you go to next. In machine learning, data is used to determine the nodes.
