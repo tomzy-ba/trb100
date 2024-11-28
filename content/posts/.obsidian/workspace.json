@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Back-End.md",
+                "file": "Israel Palestine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Back-End"
+              "title": "Israel Palestine"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Back-End.md",
+                "file": "Israel Palestine.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Back-End"
+              "title": "Backlinks for Israel Palestine"
             }
           },
           {
@@ -133,12 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Back-End.md",
+                "file": "Israel Palestine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Back-End"
+              "title": "Outgoing links from Israel Palestine"
             }
           },
           {
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Back-End.md"
+                "file": "Israel Palestine.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Back-End"
+              "title": "Outline of Israel Palestine"
             }
           }
         ],
@@ -186,6 +186,7 @@
   },
   "active": "7cf43c22cb903952",
   "lastOpenFiles": [
+    "Back-End.md",
     "Israel Palestine.md",
     "gym.md",
     "Interview.md",
@@ -197,7 +198,6 @@
     "schedule.md",
     "Programming.md",
     "C++.md",
-    "Back-End.md",
     "assets/Pasted image 20240307190012.png",
     "assets/Pasted image 20240307225308.png",
     "Pasted image 20240307225035.png",
