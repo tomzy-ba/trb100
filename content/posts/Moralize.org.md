@@ -1,5 +1,6 @@
 +++
 title = 'Moralize.org'
+date = 2024-11-28
 draft = false
 tags = 'notes'
 +++
