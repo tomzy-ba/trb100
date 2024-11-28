@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Moralize.org.md",
+                "file": "Test page.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Moralize.org"
+              "title": "Test page"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Moralize.org.md",
+                "file": "Test page.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Moralize.org"
+              "title": "Backlinks for Test page"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Moralize.org.md",
+                "file": "Test page.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Moralize.org"
+              "title": "Outgoing links from Test page"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Moralize.org.md"
+                "file": "Test page.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Moralize.org"
+              "title": "Outline of Test page"
             }
           }
         ],
@@ -166,12 +166,12 @@
   "active": "628a027a01d3671a",
   "lastOpenFiles": [
     "OdinProjectJavascript.md",
-    "Test page.md",
+    "Moralize.org.md",
+    "Machine Learning.md",
+    "life-plans.md",
     "Back-End.md",
     "Israel Palestine.md",
-    "life-plans.md",
-    "Machine Learning.md",
-    "Moralize.org.md",
+    "Test page.md",
     "assets/Pasted image 20240307190012.png",
     "assets/Pasted image 20240307225308.png",
     "random-notes.md",

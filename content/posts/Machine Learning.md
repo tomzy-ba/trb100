@@ -1,5 +1,5 @@
 +++
-title = Machine Learning
+title = 'Machine Learning'
 date = 2024-11-28
 draft = false
 tags = 'study'
