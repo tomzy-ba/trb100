@@ -6,7 +6,7 @@ theme = 'PaperMod'
 [
 build
 ]
-HUGO_VERSION = "0.125.7"
+HUGO_VERSION = '0.125.7'
 
 
 summaryLength = 20
