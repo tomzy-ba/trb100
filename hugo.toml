@@ -3,10 +3,8 @@ languageCode = 'en-uk'
 title = 'trb100'
 theme = 'PaperMod'
 
-[
-build
-]
-HUGO_VERSION = '0.125.7'
+[build]
+  HUGO_VERSION = '0.125.7'
 
 
 summaryLength = 20
